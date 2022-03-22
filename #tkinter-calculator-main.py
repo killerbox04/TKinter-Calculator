@@ -361,4 +361,3 @@ outputDisplay.grid(
 
 
 Calculator.mainloop()
-`
