@@ -1,4 +1,4 @@
-#tkinter-calculator-output-to-input-branch
+#tkinter-calculator-main
 
 from tkinter import *
 import tkinter as ttk
