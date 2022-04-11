@@ -1,4 +1,4 @@
-#tkinter-calculator-main
+#tkinter-calculator-output-to-input-branch
 
 from tkinter import *
 import tkinter as ttk
@@ -38,17 +38,24 @@ def computeInput():
     Ecur = eval(cur)
     outputDisplay.config(text = Ecur)
 
+def Out2In():
+    curOut = outputDisplay.cget("text")
+    inputDisplay.config(text = curOut)
+
+
 
 #Headers
 #Input
 inputHeader = ttk.Label(
     text = "Input:",
-    background = "Grey"
+    background = "Grey",
+    anchor = "w"
     )
 #Output
 outputHeader = ttk.Label(
     text = "Output:",
-    background = "Grey"
+    background = "Grey",
+    anchor = "w"
     )
 
 
@@ -136,6 +143,15 @@ BC = ttk.Button(
     activebackground = "grey",
     command = lambda : clearHeader()
 
+)
+
+#Input-to-Output
+BITO = ttk.Button(
+    text = "Out2In",
+    padx = NBPX,
+    pady = NBPY,
+    activebackground = "grey",
+    command = lambda : Out2In()
 )
 
 
@@ -272,6 +288,14 @@ BC.grid(
     row = BR456,
     sticky = "NSEW"
 )
+
+BITO.grid(
+    column = 3,
+    row = 0,
+    rowspan = 4,
+    sticky = "NSEW"
+)
+
 
 #Number Buttons Grid
 B1.grid(
